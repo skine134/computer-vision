@@ -2,6 +2,7 @@ import cv2
 import mediapipe as mp
 import time
 from face_detection import face_detection
+from face_mesh import face_mesh
 def main():
     cap = cv2.VideoCapture(0)
     c_time = 0
@@ -10,14 +11,14 @@ def main():
     dot_size = 5
     # pose = body_pose()
     # tracking = hand_tracking()
-    fd = face_detection()
-    # mp_face_detection = mp.solutions.face_detection
-    # mp_draw = mp.solutions.drawing_utils
-    # face_detection = mp_face_detection.FaceDetection(min_detection_confidence=0.75, model_selection=0)
+    # fd = face_detection()
+    fm = face_mesh()
     while True:
         # read img
         success, img = cap.read()
-        fd.detection(img)
+        img, faces = fm.show_face_mesh(img,draw=False)
+        if len(faces)>0:
+            print(faces[0])
         c_time = time.time()
         fps = 1/(c_time-p_time)
         p_time = c_time
