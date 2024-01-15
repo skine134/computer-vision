@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 
 
-class hand_tracking:
+class HandTracking:
     
     def __init__(self, mode=False, max_hands=2, mudel_complex=1, min_detection_conf=0.5, min_tracikng_conf=0.5):
         self.mode = mode

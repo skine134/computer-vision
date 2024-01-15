@@ -1,6 +1,6 @@
 import cv2
 import mediapipe as mp
-class face_mesh:
+class FaceMesh:
     def __init__(self,
                 static_image_mode=False,
                 max_num_faces=1,

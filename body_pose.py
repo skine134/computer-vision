@@ -1,6 +1,6 @@
 import mediapipe as mp
 import cv2
-class body_pose:
+class BodyPose:
     def __init__(self,
                mode=False,
                complex=1,

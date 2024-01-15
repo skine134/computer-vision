@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 
 
-class face_detection:
+class FaceDetection:
 
     def __init__(self, min_detection_confidence=0.75, model_selection=0):
         self.mp_face_detection = mp.solutions.face_detection

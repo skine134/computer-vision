@@ -3,13 +3,13 @@ import cv2
 import osascript
 import time
 from threading import Thread
-from hand_tracking import hand_tracking
+from hand_tracking import HandTracking
 MAX_VALUE = 320
 MIN_VALUE = 40
 
 class volume_control:
     def __init__(self):
-        self.ht = hand_tracking()
+        self.ht = HandTracking()
         self.volume_thread = Thread(target=self.__volume_thread).start()
         self.queue = []
         self.volume = None
