@@ -37,8 +37,8 @@ class FaceMesh:
                 for id, lm in enumerate(landmark.landmark):
                     ih,iw,ic = img.shape
                     x, y = int(lm.x*iw), int(lm.y*ih)
-                    cv2.putText(img,str(id),(x,y),
-                    cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 1)
+                    # cv2.putText(img,str(id),(x,y),
+                    # cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 1)
                     face.append([x, y])
                 faces.append(face)
         return img, faces
